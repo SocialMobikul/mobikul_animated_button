@@ -160,7 +160,7 @@ class ShapeContainer extends AnimatedWidget {
                     colors: gradientColor ?? [],
                   )
                 : null,
-            borderRadius: BorderRadius.circular(borderRadius ?? 20),
+            borderRadius: BorderRadius.circular(borderRadius),
           ),
           child: Row(
             mainAxisSize: MainAxisSize.min,
