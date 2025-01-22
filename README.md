@@ -1,6 +1,7 @@
 # MobiKul Animated Button Flutter Package
 
 The MobiKul Animated Button is a customizable Flutter widget designed to create visually appealing and animated buttons with various customization options. It supports color animations, gradients, scaling effects, and border animations, making it ideal for modern UI design.
+
 To find out more: https://mobikul.com/
 
 ## Features
@@ -117,7 +118,17 @@ enableColorAnimation: true,
 
 Here is a video showcasing the MobiKul Animated Button in action:
 
+## Border Animated Button
+![Border Animated Button](https://raw.githubusercontent.com/SocialMobikul/mobikul_animated_button/main/border_animation.gif)
 
+## Wave Animated Button
+![Wave Animated Button](https://raw.githubusercontent.com/SocialMobikul/mobikul_animated_button/main/Wave.gif)
+
+## Slider Animated Button
+![Slider Animated Button](https://raw.githubusercontent.com/SocialMobikul/mobikul_animated_button/main/slider.gif)
+
+## MobiKul Animated Button
+![MobiKul Animated Button](https://raw.githubusercontent.com/SocialMobikul/mobikul_animated_button/main/Mobikul_animated.gif)
 
 
 
