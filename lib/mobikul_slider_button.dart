@@ -11,7 +11,6 @@ class MobiKulSliderButton extends StatefulWidget {
     this.icon = Icons.arrow_forward,
     this.iconSize = 16,
     this.duration = const Duration(seconds: 1),
-
     this.borderRadius,
     required this.onPressed,
     this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
@@ -50,8 +49,7 @@ class _MobiKulSliderButtonState extends State<MobiKulSliderButton>
       textSize.height + widget.padding.vertical,
     );
 
-    _controller =
-        AnimationController(vsync: this, duration: widget.duration);
+    _controller = AnimationController(vsync: this, duration: widget.duration);
   }
 
   @override

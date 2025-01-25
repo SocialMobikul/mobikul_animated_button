@@ -31,12 +31,13 @@ class _CustomLoaderAnimationState extends State<CustomLoaderAnimation>
 
   @override
   Widget build(BuildContext context) {
-    return  Center(
-        child: CustomPaint(
-          size: const Size(200, 200), // Set the size of the hexagon loader
-          painter: LoaderDotsPainter(animation: _controller,loaderColor:widget.loaderColor),
-        ),
-      );
+    return Center(
+      child: CustomPaint(
+        size: const Size(200, 200), // Set the size of the hexagon loader
+        painter: LoaderDotsPainter(
+            animation: _controller, loaderColor: widget.loaderColor),
+      ),
+    );
   }
 }
 
@@ -44,7 +45,7 @@ class LoaderDotsPainter extends CustomPainter {
   final Animation<double> animation;
   final Color loaderColor;
   final Paint _paint;
-  LoaderDotsPainter( {required this.animation,required this.loaderColor})
+  LoaderDotsPainter({required this.animation, required this.loaderColor})
       : _paint = Paint()..style = PaintingStyle.fill,
         super(repaint: animation);
 
@@ -63,7 +64,7 @@ class LoaderDotsPainter extends CustomPainter {
 
       // Change dot opacity based on position
       final opacity = 0.5 + 0.5 * sin(animation.value * 2 * pi + i);
-      _paint.color = loaderColor.withOpacity(opacity);
+      _paint.color = loaderColor.withAlpha(opacity.toInt());
 
       // Draw the dot
       canvas.drawCircle(Offset(x, y), dotRadius, _paint);
@@ -73,5 +74,3 @@ class LoaderDotsPainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) => true;
 }
-
-

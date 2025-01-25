@@ -40,7 +40,6 @@ class SlideColorAnimation extends AnimatedWidget {
   final bool enableColorAnimation;
   final Color loaderColor;
 
-
   Animation<double> get curvedAnimation =>
       CurvedAnimation(parent: animation, curve: Curves.easeInOut);
 
@@ -122,7 +121,9 @@ class AnimatedColorText extends AnimatedWidget {
   Widget build(BuildContext context) {
     return Center(
       child: isLoading
-          ? CustomLoaderAnimation(loaderColor: loaderColor,)
+          ? CustomLoaderAnimation(
+              loaderColor: loaderColor,
+            )
           : Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [

@@ -73,7 +73,6 @@ class _MobiKulBorderButtonState extends State<MobiKulBorderButton>
               Container(
                 decoration: BoxDecoration(
                   color: widget.backgroundColor,
-
                 ),
                 child: Center(
                   child: Text(
