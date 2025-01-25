@@ -63,8 +63,10 @@ class LoaderDotsPainter extends CustomPainter {
       final y = center.dy + radius * sin(angle);
 
       // Change dot opacity based on position
-      final opacity = 0.5 + 0.5 * sin(animation.value * 2 * pi + i);
-      _paint.color = loaderColor.withAlpha(opacity.toInt());
+      final opacity = (0.5 + 0.5 * sin(animation.value * 2 * pi + i))
+          .clamp(0.0, 1.0); // Ensure value is between 0 and 1
+      final int alpha = (opacity * 255).toInt(); // Convert to 0-255 range
+      _paint.color = loaderColor.withAlpha(alpha);
 
       // Draw the dot
       canvas.drawCircle(Offset(x, y), dotRadius, _paint);

@@ -174,24 +174,24 @@ class AnimatedBorderButton extends AnimatedWidget {
 
   // Animations to control the border size and padding
   Animation<double> get _verticalBorderAnimation => Tween<double>(
-    begin: verticalPadding - waveLength,
-    end: verticalPadding + waveLength,
-  ).animate(_curvedAnimation);
+        begin: verticalPadding - waveLength,
+        end: verticalPadding + waveLength,
+      ).animate(_curvedAnimation);
 
   Animation<double> get _horizontalBorderAnimation => Tween<double>(
-    begin: horizontalPadding - waveLength,
-    end: horizontalPadding + waveLength,
-  ).animate(_curvedAnimation);
+        begin: horizontalPadding - waveLength,
+        end: horizontalPadding + waveLength,
+      ).animate(_curvedAnimation);
 
   Animation<double> get _borderAnimation => Tween<double>(
-    begin: waveLength,
-    end: 0.0,
-  ).animate(_curvedAnimation);
+        begin: waveLength,
+        end: 0.0,
+      ).animate(_curvedAnimation);
 
   Animation<double> get _curvedAnimation => CurvedAnimation(
-    parent: animation,
-    curve: curve,
-  );
+        parent: animation,
+        curve: curve,
+      );
 
   @override
   Widget build(BuildContext context) {
